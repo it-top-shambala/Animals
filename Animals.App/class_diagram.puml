@@ -1,0 +1,31 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Animal {
++ name : string
+}
+
+interface IVoice {
++ {abstract} Sound() : void
+}
+
+Animal <|-- Fish
+class Fish{
+}
+
+Animal <|-- Dog
+IVoice <|.. Dog
+class Dog {
++ Sound() : void
+}
+
+Animal <|-- Spider
+class Spider {}
+
+Animal <|-- Cat
+IVoice <|.. Cat
+class Cat {
++ Sound() : void
+}
+
+@enduml
